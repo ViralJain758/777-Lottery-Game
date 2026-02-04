@@ -1,0 +1,209 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height:100vh;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,120,0,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,0,0,0.12), transparent 45%),
+    linear-gradient(180deg,#050505,#0b0b0b 60%,#020202);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#ffd86b;
+  overflow:hidden;
+}
+
+/* subtle vignette */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at center,
+      transparent 45%,
+      rgba(0,0,0,0.85) 85%);
+  pointer-events:none;
+}
+
+
+/* ===== SLOT CABINET ===== */
+
+.machine {
+  background:
+    linear-gradient(145deg,#2c1a0c,#120a04);
+  width:440px;
+  padding:32px 28px 40px;
+  border-radius:26px;
+
+  border:4px solid #d4af37;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.9),
+    inset 0 2px 12px rgba(255,255,255,0.15),
+    inset 0 -6px 12px rgba(0,0,0,0.9);
+
+  position:relative;
+}
+
+
+/* glowing frame */
+.machine::before {
+  content:"";
+  position:absolute;
+  inset:2px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.25);
+  pointer-events:none;
+}
+
+/* ===== TITLE ===== */
+
+.machine h1 {
+  text-align:center;
+  font-size:34px;
+  letter-spacing:2px;
+  text-shadow:
+    0 0 8px gold,
+    0 0 18px red;
+  margin-bottom:16px;
+}
+
+/* ===== GLASS WINDOW ===== */
+
+.window {
+  background:
+    linear-gradient(180deg,#222,#060606);
+  border-radius:14px;
+  padding:10px;
+  border:3px solid #e5c15a;
+
+  display:flex;
+  justify-content:center;
+  gap:16px;
+
+  position:relative;
+  overflow:hidden;
+
+  box-shadow:
+    inset 0 0 25px rgba(0,0,0,0.9),
+    inset 0 0 12px rgba(255,255,255,0.1);
+}
+
+/* shine overlay */
+.window::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(120deg,
+      transparent 25%,
+      rgba(255,255,255,0.12) 38%,
+      rgba(255,255,255,0.05) 48%,
+      transparent 60%);
+  pointer-events:none;
+}
+
+/* ===== REELS ===== */
+
+.reel-container {
+  width:110px;
+  height:130px;
+
+  overflow:hidden;
+  border-radius:10px;
+
+  border:2px solid #f1c96b;
+
+  background:
+    linear-gradient(180deg,#050505,#000);
+
+  box-shadow:
+    inset 0 0 25px rgba(0,0,0,0.9),
+    inset 0 0 12px rgba(255,255,255,0.12),
+    0 8px 14px rgba(0,0,0,0.9);
+
+  display:flex;
+  justify-content:center;
+}
+
+.reel {
+  position:absolute;
+  width:100%;
+}
+
+/* numbers look LED-ish */
+.symbol {
+  height:120px;
+  line-height:120px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:62px;
+  font-weight:900;
+
+  color:#ff4040;
+
+  text-shadow:
+    0 0 2px rgba(255,80,80,0.6),
+    0 0 8px rgba(255,0,0,0.7);
+
+  font-family: "Orbitron", sans-serif;
+}
+
+/* ===== BUTTON ===== */
+
+button {
+  display:block;
+  margin:26px auto 10px;
+  padding:14px 50px;
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:1px;
+  color:#fff;
+  background:
+    radial-gradient(circle at top,#ff5555,#8b0000);
+  border:none;
+  border-radius:40px;
+  cursor:pointer;
+  box-shadow:
+    0 6px 0 #4a0000,
+    0 0 20px crimson;
+  transition:0.12s ease;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 2px 0 #4a0000,
+    0 0 14px crimson;
+}
+
+/* ===== STATUS TEXT ===== */
+
+#status {
+  text-align:center;
+  margin-top:12px;
+  font-size:20px;
+  letter-spacing:1px;
+  min-height:26px;
+  text-shadow:0 0 6px gold;
+}
+
+/* ===== BOTTOM DECOR ===== */
+
+.machine-footer {
+  margin-top:18px;
+  height:10px;
+  background:
+    linear-gradient(90deg,
+      transparent,
+      gold,
+      transparent);
+  opacity:0.6;
+  border-radius:20px;
+}
