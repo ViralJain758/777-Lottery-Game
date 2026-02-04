@@ -1,36 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>777 Slot</title>
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>777 Slot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slot-wrapper">
+      <div class="machine">
+        <h1>🎰 777 SLOT</h1>
 
-<div class="machine">
+        <div class="window">
+          <div class="reel-container">
+            <div class="reel" id="reel1"></div>
+          </div>
+          <div class="reel-container">
+            <div class="reel" id="reel2"></div>
+          </div>
+          <div class="reel-container">
+            <div class="reel" id="reel3"></div>
+          </div>
+        </div>
 
-  <h1>🎰 777 SLOT</h1>
+        <button id="controlBtn">SPIN</button>
 
-  <div class="window">
-    <div class="reel-container">
-      <div class="reel" id="reel1"></div>
+        <p id="status"></p>
+        <div class="win-explosion"></div>
+        <div class="machine-footer"></div>
+        <div class="lever">
+          <div class="lever-bar">
+            <div class="lever-knob"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="reel-container">
-      <div class="reel" id="reel2"></div>
-    </div>
-    <div class="reel-container">
-      <div class="reel" id="reel3"></div>
-    </div>
-  </div>
 
-
-  <button id="controlBtn">SPIN</button>
-
-  <p id="status"></p>
-  <div class="machine-footer"></div>
-</div>
-
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
