@@ -159,7 +159,7 @@ body::after {
 /* ===== BUTTON ===== */
 
 button {
-  display: block;
+  display: none;
   margin: 26px auto 10px;
   padding: 14px 50px;
   font-size: 22px;
