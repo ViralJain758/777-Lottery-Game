@@ -13,7 +13,7 @@ const SYMBOLS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const SYMBOL_HEIGHT = 150;
 const STRIP_SIZE = 80;
 
-const speeds = [10, 15, 22]; // px per frame ~ visible difference
+const speeds = [15, 20, 25]; // px per frame ~ visible difference
 
 let rafIds = [0, 0, 0];
 let positions = [0, 0, 0];
